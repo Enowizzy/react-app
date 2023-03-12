@@ -10,13 +10,13 @@ function App() {
     <div className="App">
       <Navbar></Navbar>
       <h1>Jeedie React Dev</h1>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route> path='/' element={<Home/>}</Route>
-          <Route> path='/about' element={<About/>}</Route>
-          <Route> path='/contact' element={<Contact/>}</Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
