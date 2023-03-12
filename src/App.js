@@ -8,9 +8,7 @@ function App() {
       <Navbar></Navbar>
       <h1>Jeedie React Dev</h1>
       <BrowserRouter>
-      <Routes>
-        
-      </Routes>
+        <Routes></Routes>
       </BrowserRouter>
     </div>
   );
