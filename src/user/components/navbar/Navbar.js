@@ -5,36 +5,22 @@ const Navbar = () => {
   return (
     <div>
       <header>
-			<h3>LOGO</h3>
-			<nav>
-				<a href="/#">Home</a>
-				<a href="/#">My work</a>
-				<a href="/#">Blog</a>
-				<a href="/#">About me</a>
-				<button
-					className="nav-btn nav-close-btn"
-					>
-				</button>
-			</nav>
-			<button
-				className="nav-btn"
-				>
-			</button>
-		</header>
-      <ul>
-        <li>
+        <h3>LOGO</h3>
+        <nav>
           <Link to="/">Home</Link>
-        </li>
-        <li>
           <Link to="/news">News</Link>
-        </li>
-        <li>
           <Link to="/contact">Contact</Link>
-        </li>
-        <li>
           <Link to="/about" class="active">About</Link>
-        </li>
-      </ul>
+          <button
+            className="nav-btn nav-close-btn"
+          >
+          </button>
+        </nav>
+        <button
+          className="nav-btn"
+        >
+        </button>
+      </header>
     </div>
   );
 };
