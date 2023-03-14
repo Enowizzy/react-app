@@ -1,4 +1,4 @@
-const Body = (contact$) => {
+const Body = () => {
     return (
         <div class="col-md-8">
             <h2>1. External Stylesheet</h2>
