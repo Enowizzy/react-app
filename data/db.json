@@ -1,19 +1,34 @@
 {
-  "posts": [
+  "news": [
     {
       "id": 1,
       "title": "json-server",
       "author": "typicode"
-    }
-  ],
-  "comments": [
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "title": "db-server",
+      "author": "typicoder"
+    },
+    {
+      "id": 3,
+      "title": "java-server",
+      "author": "typicodex"
+    },
+    {
+      "id": 4,
+      "title": "nodejs-server",
+      "author": "typicodeXI"
+    },
+    {
+      "id": 5,
+      "title": "browser-server",
+      "author": "typicodeXII"
+    },
+    {
+      "id": 6,
+      "title": "tomcat-server",
+      "author": "typicodeXIII"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
