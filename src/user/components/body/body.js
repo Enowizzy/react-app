@@ -1,4 +1,19 @@
+import { useEffect, useState } from "react";
+
 const Body = () => {
+    const [news_lists$, news_update$] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8000/news').then(res => {
+            return res.json();
+        }).then(resp => {
+            news_update$(resp);
+        }).catch((err) => {
+            console.log(err.message)
+        });
+    }, [])
+
+
     return (
         <div class="col-md-8">
             <h2>1. External Stylesheet</h2>
@@ -16,6 +31,33 @@ const Body = () => {
                 You can install Styled Components using the following command:
                 npm install --save styled-components
                 Next, you need to import it in you component. Then you can create a new variable that will contain the CSS. The same variable name with open and close brackets will render or create an HTML element with the previously added styles on it.</p>
+
+            <table className="table table-bordered">
+                <thead className="bg-dark text-white">
+                    <tr>
+                        <td>Id</td>
+                        <td>Title</td>
+                        <td>Author</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+                <tbody>
+                {
+                    news_lists$.map((news_list$)=>(
+                        <tr key={news_list$.id}>
+                            <td>{news_list$.id}</td>
+                            <td>{news_list$.title}</td>
+                            <td>{news_list$.author}</td>
+                            <td>
+                                <a href="edit" className="btn btn-primary">Edit</a>
+                                <a href="delete" className="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    ))
+                }
+                </tbody>
+            </table>
+
         </div>
     );
 }
