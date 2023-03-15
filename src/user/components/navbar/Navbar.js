@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div>
       <header>
-        <h3>LOGO</h3>
+        <h3>JEEDIEx</h3>
         <nav ref={navRef}>
           <Link to="/">Home</Link>
           <Link to="/news">News</Link>
