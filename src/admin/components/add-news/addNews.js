@@ -1,15 +1,26 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const AddNews = () => {
     const [author_first_name, first_name_change] = useState('');
     const [author_last_name, last_name_change] = useState('');
     const [news_message, news_change] = useState('');
-
+    const navigate = useNavigate();
     const addNews = (e) => {
         e.preventDefault();
         const news_obj = { author_first_name, author_last_name, news_message };
         console.log(news_obj);
+        fetch("http://localhost:8000/news", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(news_obj)
+        }).then(res => {
+            alert('News posted successfully');
+            navigate('/');
+        }).catch((err) => {
+            console.log(err.message)
+        })
     }
     return (
         <div class="container col-md-8 mt-5">
