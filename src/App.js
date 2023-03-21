@@ -1,4 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddNews from "./admin/components/add-news/addNews";
+import EditNews from "./admin/components/edit-news/editNews";
 import "./App.css";
 import About from "./user/components/about/About";
 import Contact from "./user/components/contact/Contact";
@@ -17,8 +19,8 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/news" element={<News />}></Route>
-          <Route path="/admin/create-news" element={<News />}></Route>
-          <Route path="/admin/edit-news" element={<News />}></Route>
+          <Route path="/admin/create-news" element={<AddNews />}></Route>
+          <Route path="/admin/edit-news" element={<EditNews />}></Route>
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
