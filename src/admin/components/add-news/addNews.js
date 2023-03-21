@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 const AddNews = () => {
     return (
         <div class="container col-md-8 mt-5">
