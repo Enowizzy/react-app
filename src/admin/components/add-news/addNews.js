@@ -20,16 +20,21 @@ const AddNews = () => {
                     <form class="text-center">
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="First name"></input>
+                                <input type="text" class="form-control" placeholder="Author first name"></input>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name"></input>
+                                <input type="text" class="form-control" placeholder="Author last name"></input>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rowsF="3" placeholder="News area"></textarea>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div className="card-footer">
-                    <a href="#" class="btn btn-primary">Add News</a>
+                    <a href="#" class="btn btn-primary float-end">Add News</a>
                 </div>
             </div>
         </div>
