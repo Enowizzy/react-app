@@ -2,33 +2,39 @@
   "news": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "author_first_name": "json-server",
+      "author_last_name": "typicode"
     },
     {
       "id": 2,
-      "title": "db-server",
-      "author": "typicoder"
+      "author_first_name": "db-server",
+      "author_last_name": "typicoder"
     },
     {
       "id": 3,
-      "title": "java-server",
-      "author": "typicodex"
+      "author_first_name": "java-server",
+      "author_last_name": "typicodex"
     },
     {
       "id": 4,
-      "title": "nodejs-server",
-      "author": "typicodeXI"
+      "author_first_name": "nodejs-server",
+      "author_last_name": "typicodeXI"
     },
     {
       "id": 5,
-      "title": "browser-server",
-      "author": "typicodeXII"
+      "author_first_name": "browser-server",
+      "author_last_name": "typicodeXII"
     },
     {
       "id": 6,
-      "title": "tomcat-server",
-      "author": "typicodeXIII"
+      "author_first_name": "tomcat-server",
+      "author_last_name": "typicodeXIII"
+    },
+    {
+      "author_first_name": "Jeedie",
+      "author_last_name": "Ex",
+      "news_message": "Whatsapp news",
+      "id": 7
     }
   ]
 }

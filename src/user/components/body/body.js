@@ -42,8 +42,8 @@ const Body = () => {
                             news_lists$.map((news_list$) => (
                                 <tr key={news_list$.id}>
                                     <td>{news_list$.id}</td>
-                                    <td>{news_list$.title}</td>
-                                    <td>{news_list$.author}</td>
+                                    <td>{news_list$.author_first_name}</td>
+                                    <td>{news_list$.author_last_name}</td>
                                     <td>
                                         <a href="view" className="btn btn-primary">View</a>
                                         <a href="edit" className="btn btn-warning">Edit</a>
