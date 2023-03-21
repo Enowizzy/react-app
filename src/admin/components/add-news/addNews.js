@@ -43,9 +43,12 @@ const AddNews = () => {
                                 <textarea class="form-control" value={news_message} onChange={e => news_change(e.target.value)} id="exampleFormControlTextarea1" rowsF="3" placeholder="News area"></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary float-end">Add News</button>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary float-end">Add News</button>
+                        </div>
                     </form>
                 </div>
+
             </div>
         </div>
     );
