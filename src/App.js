@@ -17,6 +17,8 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/news" element={<News />}></Route>
+          <Route path="/admin/create-news" element={<News />}></Route>
+          <Route path="/admin/edit-news" element={<News />}></Route>
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
