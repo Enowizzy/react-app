@@ -1,6 +1,6 @@
 const AddNews = () => {
     return (
-        <div class="container col-md-8 mt-3">
+        <div class="container col-md-8 mt-5">
             <div class="card text-center">
                 <div class="card-header">
                     <ul class="nav nav-pills card-header-pills">
