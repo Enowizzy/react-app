@@ -1,6 +1,6 @@
 const AddNews = () => {
     return (
-        <div class="container mt-3">
+        <div class="container col-md-8 mt-3">
             <div class="card text-center">
                 <div class="card-header">
                     <ul class="nav nav-pills card-header-pills">
@@ -16,8 +16,17 @@ const AddNews = () => {
                     </ul>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <h5 class="card-title">News Form</h5>
+                    <form class="text-center">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name"></input>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name"></input>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div className="card-footer">
                     <a href="#" class="btn btn-primary">Add News</a>
