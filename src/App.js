@@ -8,6 +8,8 @@ import Error from "./user/components/error/error";
 import Home from "./user/components/home/Home";
 import Navbar from "./user/components/navbar/Navbar";
 import News from "./user/components/news/news";
+import {ToastContainer} from 'react-toastify';
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

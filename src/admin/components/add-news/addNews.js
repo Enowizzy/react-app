@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {toast} from 'react-toastify';
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const AddNews = () => {
@@ -16,7 +17,7 @@ const AddNews = () => {
             headers: { "content-type": "application/json" },
             body: JSON.stringify(news_obj)
         }).then(res => {
-            alert('News posted successfully');
+            toast.success('News posted successfully');
             navigate('/');
         }).catch((err) => {
             console.log(err.message)

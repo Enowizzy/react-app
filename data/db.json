@@ -35,6 +35,12 @@
       "author_last_name": "Ex",
       "news_message": "Whatsapp news",
       "id": 7
+    },
+    {
+      "author_first_name": "Jide",
+      "author_last_name": "Ex",
+      "news_message": "Instagram news",
+      "id": 8
     }
   ]
 }
