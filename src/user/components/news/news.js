@@ -32,8 +32,8 @@ const News = () => {
                                 <td>{news_list$.author_first_name}</td>
                                 <td>{news_list$.author_last_name}</td>
                                 <td>
-                                    <a href="view" className="btn btn-primary">View</a>
-                                    <a href="edit" className="btn btn-warning">Edit</a>
+                                    <a href="view" className="btn btn-primary me-2">View</a>
+                                    <a href="edit" className="btn btn-warning me-2">Edit</a>
                                     <a href="delete" className="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
