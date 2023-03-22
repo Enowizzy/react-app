@@ -7,10 +7,12 @@ const EditNews = () => {
     const [author_last_name, last_name_change] = useState('');
     const [news_message, news_change] = useState('');
     const navigate = useNavigate();
-    const updateNews = (e) => {
+
+const updateNews = (e) => {
         e.preventDefault();
         const news_obj = { author_first_name, author_last_name, news_message };
         console.log(news_obj);
+
         fetch("http://localhost:8000/news", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -19,8 +21,8 @@ const EditNews = () => {
             toast.success('News posted successfully');
             navigate('/news');
         }).catch((err) => {
-            console.log(err.message)
-        })
+            console.log(err.message);
+        });
     }
     return (
         <div class="container col-md-8 mt-5">
