@@ -18,7 +18,7 @@ const AddNews = () => {
             body: JSON.stringify(news_obj)
         }).then(res => {
             toast.success('News posted successfully');
-            navigate('/');
+            navigate('/news');
         }).catch((err) => {
             console.log(err.message)
         })
