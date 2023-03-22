@@ -22,7 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/news" element={<News />}></Route>
           <Route path="/admin/create-news" element={<AddNews />}></Route>
-          <Route path="/admin/edit-news" element={<EditNews />}></Route>
+          <Route path="/admin/edit-news/:code" element={<EditNews />}></Route>
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
