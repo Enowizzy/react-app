@@ -32,10 +32,10 @@ const AddNews = () => {
                             <a class="nav-link active" href="#">All News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">Recently</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">News Form</a>
                         </li>
                     </ul>
                 </div>
