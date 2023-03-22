@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from 'react-toastify';
 
 const EditNews = () => {
     const [author_first_name, first_name_change] = useState('');
     const [author_last_name, last_name_change] = useState('');
     const [news_message, news_change] = useState('');
+    const [id, idChange] = useState(0);
+    const [code] = useParams();
     const navigate = useNavigate();
 
 const updateNews = (e) => {
