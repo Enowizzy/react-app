@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { useParams } from "react-router-dom";
 
 const EditNews = () => {
     const [author_first_name, first_name_change] = useState('');
@@ -8,7 +7,6 @@ const EditNews = () => {
     const [news_message, news_change] = useState('');
     const [id, idChange] = useState(0);
     const [code] = useParams();
-    const navigate = useNavigate();
 
     const updateNews = (e) => {
         e.preventDefault();
