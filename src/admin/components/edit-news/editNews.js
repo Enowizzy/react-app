@@ -10,18 +10,18 @@ const EditNews = () => {
     const [code] = useParams();
     const navigate = useNavigate();
 
-const updateNews = (e) => {
+    const updateNews = (e) => {
         e.preventDefault();
         const news_obj = { author_first_name, author_last_name, news_message };
         console.log(news_obj);
 
-        fetch("http://localhost:8000/news", {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(news_obj)
+        fetch("http://localhost:8000/news/" + code).then(res => {
+            return res.json();
         }).then(res => {
-            toast.success('News posted successfully');
-            navigate('/news');
+            idChange(res.id);
+            first_name_change(res.author_first_name);
+            last_name_change(res.author_last_name);
+            news_change(res.news_message);
         }).catch((err) => {
             console.log(err.message);
         });
@@ -54,7 +54,10 @@ const updateNews = (e) => {
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="form-group">
+                            <div className="col">
+                                <input type="text" disabled="true" value={id} onChange={e => idChange(e.target.value)} class="form-control" placeholder="Author first name"></input>
+                            </div>
+                            <div class="col form-group">
                                 <textarea class="form-control" value={news_message} onChange={e => news_change(e.target.value)} id="exampleFormControlTextarea1" rowsF="3" placeholder="News area"></textarea>
                             </div>
                         </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const News = () => {
     const [news_lists$, news_update$] = useState([]);
@@ -33,7 +34,7 @@ const News = () => {
                                 <td>{news_list$.author_last_name}</td>
                                 <td>
                                     <a href="view" className="btn btn-primary me-2">View</a>
-                                    <a href="edit" className="btn btn-warning me-2">Edit</a>
+                                    <Link to={"/admin/edit-news/" + news_list$.id} className="btn btn-warning me-2">Edit</Link>
                                     <a href="delete" className="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
