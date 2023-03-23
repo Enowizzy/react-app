@@ -1,22 +1,38 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from 'react-toastify';
 
 const EditNews = () => {
     const [author_first_name, first_name_change] = useState('');
     const [author_last_name, last_name_change] = useState('');
     const [news_message, news_change] = useState('');
+    const [id, idChange] = useState(0);
     const navigate = useNavigate();
-    const addNews = (e) => {
+    const { code } = useParams();
+
+    useEffect(() => {
+        fetch("http://localhost:8000/news/" + code).then(res => {
+            return res.json();
+        }).then(res => {
+            idChange(res.id);
+            first_name_change(res.author_first_name);
+            last_name_change(res.author_last_name);
+            news_change(res.news_message);
+        }).catch((err) => {
+            console.log(err.message);
+        });
+    }, [code]);
+
+    const updateNews = (e) => {
         e.preventDefault();
-        const news_obj = { author_first_name, author_last_name, news_message };
+        const news_obj = { id, author_first_name, author_last_name, news_message };
         console.log(news_obj);
-        fetch("http://localhost:8000/news", {
-            method: "POST",
+        fetch("http://localhost:8000/news/" + id, {
+            method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(news_obj)
         }).then(res => {
-            toast.success('News posted successfully');
+            toast.success('News Updated Successfully');
             navigate('/news');
         }).catch((err) => {
             console.log(err.message)
@@ -40,7 +56,7 @@ const EditNews = () => {
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Edit News Form</h5>
-                    <form class="text-center" onSubmit={addNews}>
+                    <form class="text-center" onSubmit={updateNews}>
                         <div class="row">
                             <div class="col">
                                 <input type="text" value={author_first_name} onChange={e => first_name_change(e.target.value)} class="form-control" placeholder="Author first name"></input>
@@ -51,7 +67,7 @@ const EditNews = () => {
                         </div>
                         <div class="row mt-3">
                             <div className="col">
-                                <input type="text" disabled="true" class="form-control" placeholder="Id"></input>
+                                <input type="text" disabled="true" value={id} onChange={e => idChange(e.target.value)} class="form-control" placeholder="Id"></input>
                             </div>
                             <div class="col form-group">
                                 <textarea class="form-control" value={news_message} onChange={e => news_change(e.target.value)} id="exampleFormControlTextarea1" rowsF="3" placeholder="News area"></textarea>
