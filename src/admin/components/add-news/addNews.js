@@ -60,7 +60,6 @@ const AddNews = () => {
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
     );
