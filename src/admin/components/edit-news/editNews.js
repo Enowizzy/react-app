@@ -39,7 +39,7 @@ const EditNews = () => {
                     </ul>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">News Form</h5>
+                    <h5 class="card-title">Edit News Form</h5>
                     <form class="text-center" onSubmit={addNews}>
                         <div class="row">
                             <div class="col">
