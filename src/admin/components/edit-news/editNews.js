@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from 'react-toastify';
 
 const EditNews = () => {
@@ -51,6 +51,9 @@ const EditNews = () => {
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">News Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <Link class="nav-link active float-right" to={"/news"}><i class="fa fa-arrow-back"></i>Back</Link>
                         </li>
                     </ul>
                 </div>
