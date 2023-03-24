@@ -1,46 +1,28 @@
 {
   "news": [
     {
-      "id": 1,
-      "author_first_name": "json-server",
-      "author_last_name": "jeediecode"
+      "author_first_name": "React",
+      "author_last_name": "Js",
+      "news_message": "React News",
+      "id": 1
     },
     {
-      "id": 2,
-      "author_first_name": "db-server",
-      "author_last_name": "jidecoder"
+      "author_first_name": "Angular",
+      "author_last_name": "Ts",
+      "news_message": "Angular News",
+      "id": 2
     },
     {
-      "id": 3,
-      "author_first_name": "java-server",
-      "author_last_name": "JEEDIEcodex"
+      "author_first_name": "VueJs",
+      "author_last_name": "Js",
+      "news_message": "VueJs News",
+      "id": 3
     },
     {
-      "id": 4,
-      "author_first_name": "nodejs-server",
-      "author_last_name": "jeedieXI"
-    },
-    {
-      "id": 5,
-      "author_first_name": "browser-server",
-      "author_last_name": "jeedieXII"
-    },
-    {
-      "id": 6,
-      "author_first_name": "tomcat-server",
-      "author_last_name": "jideXIII"
-    },
-    {
-      "author_first_name": "Jeedie",
-      "author_last_name": "Ex",
-      "news_message": "Whatsapp news",
-      "id": 7
-    },
-    {
-      "author_first_name": "Jide",
-      "author_last_name": "Ex",
-      "news_message": "Instagram news",
-      "id": 8
+      "author_first_name": "NextJs",
+      "author_last_name": "Js",
+      "news_message": "NextJs News",
+      "id": 4
     }
   ]
 }

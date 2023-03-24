@@ -9,6 +9,7 @@ import Home from "./user/components/home/Home";
 import Navbar from "./user/components/navbar/Navbar";
 import News from "./user/components/news/news";
 import {ToastContainer} from 'react-toastify';
+import ViewNews from "./admin/components/view-news/ViewNews";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/news" element={<News />}></Route>
           <Route path="/admin/create-news" element={<AddNews />}></Route>
           <Route path="/admin/edit-news/:code" element={<EditNews />}></Route>
+          <Route path="/admin/view-news/:code" element={<ViewNews />}></Route>
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
