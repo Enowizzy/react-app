@@ -24,6 +24,14 @@ const Register = () => {
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(registerForm)
             }).then(res => {
+                if (res.length>0) {
+                    let user_obj=res[0];
+                    localStorage.setItem('email', email)
+                    localStorage.setItem('role', user_obj.role)
+                    navigate('/');
+                }else{
+                    toast.error('Login Failed');  
+                }
                 toast.success('User Registered Successfully');
                 navigate('/');
             }).catch((err) => {
