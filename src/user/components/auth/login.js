@@ -23,8 +23,9 @@ const Login = () => {
             }).then((res) => {
                 if (res.length>0) {
                     let user_obj=res[0];
-                    localStorage.setItem('email', email)
-                    localStorage.setItem('role', user_obj.role)
+                    localStorage.setItem('email', email);
+                    localStorage.setItem('role', user_obj.role);
+                    toast.success('User Logged In Successfully');
                     navigate('/');
                 }else{
                     toast.error('Login Failed');  
