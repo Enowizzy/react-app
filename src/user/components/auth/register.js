@@ -16,33 +16,25 @@ const Register = () => {
 
     const register = (e) => {
         e.preventDefault();
-        _validator();
+        // _validator();
         const registerForm = { first_name, last_name, phone, email, password, role };
-        if (_validate$) {
+        // if (_validate$) {
             fetch("http://localhost:8000/users", {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(registerForm)
             }).then(res => {
-                if (res.length>0) {
-                    let user_obj=res[0];
-                    localStorage.setItem('email', email)
-                    localStorage.setItem('role', user_obj.role)
-                    navigate('/');
-                }else{
-                    toast.error('Login Failed');  
-                }
                 toast.success('User Registered Successfully');
                 navigate('/');
             }).catch((err) => {
                 console.log(err.message)
             });
-        } else {
-            toast.warning('Please Enter Valid Data');
-        }
+        // } else {
+        //     toast.warning('Please Enter Valid Data');
+        // }
     }
     const _validateEmail = (email_value) => {
-        if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email_value)) {
+        if (/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/.test(email_value)) {
 
         } else {
             toast.warning('Email not valid');
@@ -60,13 +52,14 @@ const Register = () => {
         }
         if (email.length === 0) {
             _validate$ = false;
-        } else {
-            if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)) {
-
-            } else {
-                _validate$ = false;
-            }
         }
+        //  else {
+        //     if (/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/.test(email)) {
+
+        //     } else {
+        //         _validate$ = false;
+        //     }
+        // }
         if (password.length === 0) {
             _validate$ = false;
         }

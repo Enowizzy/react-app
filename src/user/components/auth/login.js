@@ -35,7 +35,7 @@ const Login = () => {
         // }
     }
     const _validateEmail = (email_value) => {
-        if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email_value)) {
+        if (/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/.test(email_value)) {
             _validate$ = true;
         } else {
             toast.warning('Email not valid');
@@ -45,7 +45,7 @@ const Login = () => {
         if (email.length === 0) {
             _validate$ = false;
         } else {
-            if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)) {
+            if (/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/.test(email)) {
                 _validate$ = true;
             } else {
                 _validate$ = false;

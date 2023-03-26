@@ -62,6 +62,15 @@
       "email": "enock@jeedie.co.tz",
       "password": "J33diem26",
       "id": 4
+    },
+    {
+      "first_name": "JEEDIEx",
+      "last_name": "JIDEx",
+      "phone": "255625460123",
+      "email": "jide@jeedie.co.tz",
+      "password": "J33diem23",
+      "role": "",
+      "id": 5
     }
   ]
 }
