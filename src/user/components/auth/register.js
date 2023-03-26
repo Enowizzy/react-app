@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -25,7 +26,7 @@ const Register = () => {
                 body: JSON.stringify(registerForm)
             }).then(res => {
                 toast.success('User Registered Successfully');
-                navigate('/');
+                navigate('/user/login');
             }).catch((err) => {
                 console.log(err.message)
             });
