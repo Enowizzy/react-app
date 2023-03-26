@@ -24,5 +24,44 @@
       "news_message": "NextJs News",
       "id": 4
     }
+  ],
+  "users": [
+    {
+      "first_name": "JEEDIEx",
+      "last_name": "JIDEx",
+      "phone": "255625460123",
+      "email": "enock@jeedie.co.tz",
+      "password": "J33diem23",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "first_name": "JEEDIEx",
+      "last_name": "JIDEx",
+      "phone": "255625460123",
+      "email": "enock@jeedie.co.tz",
+      "password": "J33diem24",
+      "role": "",
+      "id": 2
+    },
+    {
+      "first_name": "JEEDIEx",
+      "last_name": "JIDEx",
+      "phone": "255625460123",
+      "email": "enock@jeedie.co.tz",
+      "password": "J33diem25",
+      "admin": "admin",
+      "teacher": "teacher",
+      "student": "student",
+      "id": 3
+    },
+    {
+      "first_name": "JEEDIEx",
+      "last_name": "JIDEx",
+      "phone": "255625460123",
+      "email": "enock@jeedie.co.tz",
+      "password": "J33diem26",
+      "id": 4
+    }
   ]
 }

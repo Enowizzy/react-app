@@ -10,6 +10,8 @@ import Navbar from "./user/components/navbar/Navbar";
 import News from "./user/components/news/news";
 import {ToastContainer} from 'react-toastify';
 import ViewNews from "./admin/components/view-news/ViewNews";
+import Register from "./user/components/auth/register";
+import Login from "./user/components/auth/login";
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
           <Route path="/admin/create-news" element={<AddNews />}></Route>
           <Route path="/admin/edit-news/:code" element={<EditNews />}></Route>
           <Route path="/admin/view-news/:code" element={<ViewNews />}></Route>
+          <Route path="/user/register" element={<Register />}></Route>
+          <Route path="/user/login" element={<Login />}></Route>
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
