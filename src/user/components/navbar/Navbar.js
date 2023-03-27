@@ -18,6 +18,8 @@ const Navbar = () => {
       let user_role = localStorage.getItem('email') != null ? localStorage.getItem('role').toString() : '';
       if (user_role === 'admin@jeedie.co.tz') {
         isAdmin(true);
+      }else{
+        isAdmin(false);
       }
       menu_visible_change(true);
     }
