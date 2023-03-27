@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
+import { FaUserCircle } from 'react-icons/fa';
 
 import "./Navbar.css";
 
@@ -63,6 +64,11 @@ const Navbar = () => {
           onClick={showNavbar}>
           <FaBars />
         </button>
+        <span>
+          <Link to="/user/login">
+            <FaUserCircle />
+          </Link>
+        </span>
       </header>
     }
     </div>
