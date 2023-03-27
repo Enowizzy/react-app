@@ -15,10 +15,10 @@ const Navbar = () => {
     if (location.pathname === '/user/register' || location.pathname === '/user/login') {
       menu_visible_change(false);
     } else {
-      let user_role = localStorage.getItem('email') != null ? localStorage.getItem('role').toString() : '';
-      if (user_role === 'admin@jeedie.co.tz') {
+      let user_role = localStorage.getItem('role') != null ? localStorage.getItem('role').toString() : '';
+      if (user_role === 'admin') {
         isAdmin(true);
-      }else{
+      } else {
         isAdmin(false);
       }
       menu_visible_change(true);
