@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -30,6 +32,12 @@ const Navbar = () => {
       "responsive_nav"
     );
   };
+  const logout = () => {
+    localStorage.remove();
+    toast.success('User Logged In Successfully');
+    navigate('/');
+
+  };
   return (
     <div>{menu_visible &&
       <header>
@@ -42,7 +50,7 @@ const Navbar = () => {
           }
           <Link to="/contact">Contact</Link>
           <Link to="/about" class="active">About</Link>
-          <Link to="/logout" class="active">Logout</Link>
+          <a type="button" onClick={() => logout()} class="active">Logout</a>
           <button
             className="nav-btn nav-close-btn"
             onClick={showNavbar}>
