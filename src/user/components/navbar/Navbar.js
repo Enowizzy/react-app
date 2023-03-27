@@ -34,10 +34,10 @@ const Navbar = () => {
     );
   };
   const logout = () => {
-    localStorage.remove();
-    toast.success('User Logged In Successfully');
+    localStorage.removeItem('role')
+    localStorage.removeItem('email')
+    toast.success('User Logged Out Successfully');
     navigate('/');
-
   };
   return (
     <div>{menu_visible &&
@@ -51,7 +51,7 @@ const Navbar = () => {
           }
           <Link to="/contact">Contact</Link>
           <Link to="/about" class="active">About</Link>
-          <a type="button" onClick={() => logout()} class="active">Logout</a>
+          <a type="button" onClick={logout} class="active">Logout</a>
           <button
             className="nav-btn nav-close-btn"
             onClick={showNavbar}>
