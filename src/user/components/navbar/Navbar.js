@@ -39,7 +39,7 @@ const Navbar = () => {
           }
           <Link to="/contact">Contact</Link>
           <Link to="/about" class="active">About</Link>
-          <Link to="/logout" class="active">About</Link>
+          <Link to="/logout" class="active">Logout</Link>
           <button
             className="nav-btn nav-close-btn"
             onClick={showNavbar}>
