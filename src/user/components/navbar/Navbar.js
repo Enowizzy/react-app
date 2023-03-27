@@ -12,12 +12,13 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let user_role = localStorage.getItem('email');
     if (location.pathname === '/user/register' || location.pathname === '/user/login') {
       menu_visible_change(false)
-    }
-    if (user_role === 'admin@jeedie.co.tz') {
-      isAdmin(true);
+    } else {
+      let user_role = localStorage.getItem('email') != null ? localStorage.getItem('role').toString() : '';
+      if (user_role === 'admin@jeedie.co.tz') {
+        isAdmin(true);
+      }
     }
   }, [location, navigate]);
 
@@ -33,7 +34,7 @@ const Navbar = () => {
         <nav ref={navRef}>
           <Link to="/">Home</Link>
           <Link to="/news">News</Link>
-          {isAdmin &&
+          {admin &&
             <Link to="/admin/create-news">Add News</Link>
           }
           <Link to="/contact">Contact</Link>
