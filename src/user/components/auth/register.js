@@ -71,7 +71,7 @@ const Register = () => {
                 <div class="card-header">
                     <ul class="nav nav-pills card-header-pills">
                         <li class="nav-item">
-                            <Link class="nav-link active" to={"/"}>Home</Link>
+                            <Link style={{ float: 'right' }} class="nav-link active" to={"/"}>Home</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link" to={0}>Quick Link</Link>
