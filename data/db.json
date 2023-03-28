@@ -38,48 +38,20 @@
     {
       "first_name": "JEEDIEx",
       "last_name": "JIDEx",
-      "phone": "255625460123",
-      "email": "enock@jeedie.co.tz",
-      "password": "J33diem24",
-      "role": "",
+      "phone": "255625460124",
+      "email": "jeediex@jeedie.co.tz",
+      "password": "J33diem23",
+      "role": "teacher",
       "id": 2
     },
     {
       "first_name": "JEEDIEx",
       "last_name": "JIDEx",
-      "phone": "255625460123",
-      "email": "enock@jeedie.co.tz",
-      "password": "J33diem25",
-      "admin": "admin",
-      "teacher": "teacher",
-      "student": "student",
-      "id": 3
-    },
-    {
-      "first_name": "JEEDIEx",
-      "last_name": "JIDEx",
-      "phone": "255625460123",
-      "email": "enock@jeedie.co.tz",
-      "password": "J33diem26",
-      "id": 4
-    },
-    {
-      "first_name": "JEEDIEx",
-      "last_name": "JIDEx",
-      "phone": "255625460123",
-      "email": "jide@jeedie.co.tz",
-      "password": "J33diem23",
-      "role": "",
-      "id": 5
-    },
-    {
-      "first_name": "JEEDIEx",
-      "last_name": "JIDEx",
-      "phone": "255625460127",
+      "phone": "255625460125",
       "email": "jidex@jeedie.co.tz",
       "password": "J33diem23",
-      "role": "",
-      "id": 6
+      "role": "student",
+      "id": 3
     }
   ]
 }

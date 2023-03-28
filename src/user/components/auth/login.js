@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 
 const Login = () => {
-    const [email, emailChange] = useState('enock@jeedie.co.tz');
+    const [email, emailChange] = useState('admin@jeedie.co.tz');
     const [password, passwordChange] = useState('J33diem23');
     const navigate = useNavigate();
 
@@ -15,22 +15,22 @@ const Login = () => {
         e.preventDefault();
         _validator();
         // if (_validate$) {
-            fetch("http://localhost:8000/users?email="+email+"&password="+password).then(res => {
-                if (!res.ok) {
-                    toast.error('Login Failed');  
-                }
-                return res.json();
-            }).then((res) => {
-                if (res.length>0) {
-                    let user_obj=res[0];
-                    localStorage.setItem('email', email);
-                    localStorage.setItem('role', user_obj.role);
-                    toast.success('User Logged In Successfully');
-                    navigate('/');
-                }else{
-                    toast.error('Login Failed');  
-                }
-            });
+        fetch("http://localhost:8000/users?email=" + email + "&password=" + password).then(res => {
+            if (!res.ok) {
+                toast.error('Login Failed');
+            }
+            return res.json();
+        }).then((res) => {
+            if (res.length > 0) {
+                let user_obj = res[0];
+                localStorage.setItem('email', email);
+                localStorage.setItem('role', user_obj.role);
+                toast.success('Logged In Successfully');
+                navigate('/');
+            } else {
+                toast.error('Login Failed');
+            }
+        });
         // } else {
         //     toast.warning('Please Enter Valid Data');
         // }
@@ -89,6 +89,7 @@ const Login = () => {
                             </div>
                         </div>
                         <div class="card-footer mt-3">
+                            <span>New User? <Link to='/user/register'>Sign Up here</Link></span>
                             <button type="submit" class="btn btn-primary float-end">Sign In</button>
                         </div>
                     </form>

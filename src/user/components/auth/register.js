@@ -13,6 +13,11 @@ const Register = () => {
     const [role, roleChange] = useState('');
     const navigate = useNavigate();
 
+    const roles = [
+        { "id": "admin" },
+        { "id": "student" },
+        { "id": "teacher" }
+    ];
     let _validate$ = false;
 
     const register = (e) => {
@@ -20,16 +25,16 @@ const Register = () => {
         // _validator();
         const registerForm = { first_name, last_name, phone, email, password, role };
         // if (_validate$) {
-            fetch("http://localhost:8000/users", {
-                method: "POST",
-                headers: { "content-type": "application/json" },
-                body: JSON.stringify(registerForm)
-            }).then(res => {
-                toast.success('User Registered Successfully');
-                navigate('/user/login');
-            }).catch((err) => {
-                console.log(err.message)
-            });
+        fetch("http://localhost:8000/users", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(registerForm)
+        }).then(res => {
+            toast.success('User Registered Successfully');
+            navigate('/user/login');
+        }).catch((err) => {
+            console.log(err.message)
+        });
         // } else {
         //     toast.warning('Please Enter Valid Data');
         // }
@@ -112,16 +117,17 @@ const Register = () => {
                             <div class="col mt-4">
                                 <div class="input-group mb-3">
                                     <label class="input-group-text" for="inputGroupSelect01">Roles</label>
-                                    <select class="form-select" id="inputGroupSelect01">
+                                    <select value={role} onChange={e => roleChange(e.target.value)} class="form-select" id="inputGroupSelect01">
                                         <option selected>Select role</option>
-                                        <option value="3" onChange={e => roleChange(e.target.value)}>student</option>
-                                        <option value="2" onChange={e => roleChange(e.target.value)}>teacher</option>
-                                        <option value="1" onChange={e => roleChange(e.target.value)}>admin</option>
+                                        {roles && roles.map((role) => (
+                                            <option value={role.id} key={role.id}>{role.id}</option>
+                                        ))}
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer mt-3">
+                            <span>Already registered? <Link to='/user/login'>Sign In here</Link></span>
                             <button type="submit" class="btn btn-primary float-end">Sign Up</button>
                         </div>
                     </form>

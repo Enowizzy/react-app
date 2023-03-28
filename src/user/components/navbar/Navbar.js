@@ -37,7 +37,7 @@ const Navbar = () => {
   const logout = () => {
     localStorage.removeItem('role')
     localStorage.removeItem('email')
-    toast.success('User Logged Out Successfully');
+    toast.success('Logged Out Successfully');
     navigate('/');
   };
   return (
