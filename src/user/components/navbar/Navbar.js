@@ -48,7 +48,7 @@ const Navbar = () => {
           <Link to="/">Home</Link>
           <Link to="/news">News</Link>
           {admin &&
-            <Link to="/admin/create-news">Add News</Link>
+            <><Link to="/admin/create-news">Add News</Link><Link to="/admin/users">Users</Link></>
           }
           <Link to="/contact">Contact</Link>
           <Link to="/about" class="active">About</Link>
