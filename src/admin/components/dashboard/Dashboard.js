@@ -8,20 +8,18 @@ function Dashboard() {
     const [style, setStyle] = useState("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion");
 
     const changeStyle = () => {
-        if (style === "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion")
-        {
+        if (style === "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion") {
             setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled");
         }
-        else{
+        else {
             setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion")
         }
     };
     const changeStyle1 = () => {
-        if (style === "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion")
-        {
+        if (style === "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion") {
             setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled1");
         }
-        else{
+        else {
             setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion")
         }
     };
@@ -43,8 +41,8 @@ function Dashboard() {
                             </div>
                             <div className="sidebar-brand-text mx-3">JEEDIEx </div>
                             <div className="text-center d-none d-md-inline">
-                            <button className="rounded-circle border-0" id="sidebarToggle" onClick={changeStyle}></button>
-                        </div>
+                                <button className="rounded-circle border-0" id="sidebarToggle" onClick={changeStyle}></button>
+                            </div>
                         </a>
 
                         {/*   <!-- Divider --> */}
@@ -148,7 +146,7 @@ function Dashboard() {
                         <hr className="sidebar-divider d-none d-md-block" />
 
                         {/*   <!-- Sidebar Toggler (Sidebar) --> */}
-                      {/*   <div className="text-center d-none d-md-inline">
+                        {/*   <div className="text-center d-none d-md-inline">
                             <button className="rounded-circle border-0" id="sidebarToggle" onClick={changeStyle}></button>
                         </div> */}
 
