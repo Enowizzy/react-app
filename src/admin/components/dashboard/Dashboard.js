@@ -91,8 +91,8 @@ function Dashboard() {
                                 data-parent="#accordionSidebar">
                                 <div className="bg-white py-2 collapse-inner rounded">
                                     <h6 className="collapse-header">News Utilities:</h6>
-                                    <a className="collapse-item" href="utilities-color.html">Create</a>
-                                    <a className="collapse-item" href="utilities-border.html">View</a>
+                                    <Link className="collapse-item" href="utilities-color.html">Create</Link>
+                                    <Link className="collapse-item" href="utilities-border.html">View</Link>
                                     <a className="collapse-item" href="utilities-animation.html">Animations</a>
                                     <a className="collapse-item" href="utilities-other.html">Other</a>
                                 </div>
