@@ -13,6 +13,7 @@ import ViewNews from "./admin/components/view-news/ViewNews";
 import Register from "./user/components/auth/register";
 import Login from "./user/components/auth/login";
 import UsersList from "./admin/components/users/UsersList";
+import Dashboard from "./admin/components/dashboard/Dashboard";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/user/register" element={<Register />}></Route>
           <Route path="/user/login" element={<Login />}></Route>
           <Route path="/admin/users" element={<UsersList />}></Route>
+          <Route path="/admin" element={<Dashboard />}></Route>
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
