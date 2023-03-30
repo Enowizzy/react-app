@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/jsx-no-target-blank */
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
 function Dashboard() {
@@ -74,6 +75,7 @@ function Dashboard() {
                             <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                                 <div className="bg-white py-2 collapse-inner rounded">
                                     <h6 className="collapse-header">Custom Components:</h6>
+                                    <Link className="collapse-item" to="/admin/users">Users</Link>
                                     <a className="collapse-item" href="buttons.html">Buttons</a>
                                     <a className="collapse-item" href="cards.html">Cards</a>
                                 </div>
