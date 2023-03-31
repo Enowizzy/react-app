@@ -1,29 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/jsx-no-target-blank */
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Sidebar from '../sidebar/Sidebar';
+import Topbar from '../topbar/Topbar';
 import './Dashboard.css';
 
 function Dashboard() {
-    const [style, setStyle] = useState("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion");
-
-    const changeStyle = () => {
-        if (style === "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion") {
-            setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled");
-        }
-        else {
-            setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion")
-        }
-    };
-    const changeStyle1 = () => {
-        if (style === "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion") {
-            setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled1");
-        }
-        else {
-            setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion")
-        }
-    };
 
     return (
         <div>
@@ -40,7 +22,7 @@ function Dashboard() {
                         {/*  <!-- Main Content --> */}
                         <div id="content">
 
-                         
+                            <Topbar />
 
                             {/* <!-- Begin Page Content --> */}
                             <div className="container-fluid">
