@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import Dashboard from '../dashboard/Dashboard';
+import Footer from '../footer/Footer';
 import Sidebar from '../sidebar/Sidebar';
 import Topbar from '../topbar/Topbar';
 import './AminHome.css';
@@ -31,13 +32,7 @@ function AdminHome() {
                         {/*   <!-- End of Main Content -->
 
                                         <!-- Footer --> */}
-                        <footer className="sticky-footer bg-white">
-                            <div className="container my-auto">
-                                <div className="copyright text-center my-auto">
-                                    <span>Copyright &copy; Your Website 2021</span>
-                                </div>
-                            </div>
-                        </footer>
+                       <Footer/>
                         {/* <!-- End of Footer --> */}
 
                     </div>
