@@ -3,6 +3,7 @@
 import React from 'react';
 import Dashboard from '../dashboard/Dashboard';
 import Footer from '../footer/Footer';
+import Logout from '../logout/Logout';
 import Sidebar from '../sidebar/Sidebar';
 import Topbar from '../topbar/Topbar';
 import './AminHome.css';
@@ -47,7 +48,7 @@ function AdminHome() {
                 </a>
 
                 {/*  <!-- Logout Modal--> */}
-             
+                <Logout />
 
             </body>
         </div>
