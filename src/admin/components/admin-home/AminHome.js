@@ -32,7 +32,7 @@ function AdminHome() {
                         </div>
                         {/*   <!-- End of Main Content -->
 
-                                        <!-- Footer --> */}
+                        <!-- Footer --> */}
                         <Footer />
                         {/* <!-- End of Footer --> */}
 
@@ -42,13 +42,14 @@ function AdminHome() {
                 </div>
                 {/*  <!-- End of Page Wrapper -->
 
-                                <!-- Scroll to Top Button--> */}
+                <!-- Scroll to Top Button--> */}
                 <a className="scroll-to-top rounded" href="#page-top">
                     <i className="fas fa-angle-up"></i>
                 </a>
 
                 {/*  <!-- Logout Modal--> */}
                 <Logout />
+                {/*  <!-- Logout Modal--> */}
 
             </body>
         </div>
