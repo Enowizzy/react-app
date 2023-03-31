@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Sidebar from '../sidebar/Sidebar';
 import './Dashboard.css';
 
 function Dashboard() {
@@ -30,12 +31,8 @@ function Dashboard() {
 
                 {/*  <!-- Page Wrapper --> */}
                 <div id="wrapper">
-
-
-
-
-
-
+                    
+                    <Sidebar />
 
                     {/*  <!-- Content Wrapper --> */}
                     <div id="content-wrapper" className="d-flex flex-column">
