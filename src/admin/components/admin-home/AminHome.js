@@ -3,7 +3,7 @@
 import React from 'react';
 import Sidebar from '../sidebar/Sidebar';
 import Topbar from '../topbar/Topbar';
-import './Dashboard.css';
+import './AminHome.css';
 
 function AdminHome() {
 

@@ -13,7 +13,7 @@ import ViewNews from "./admin/components/view-news/ViewNews";
 import Register from "./user/components/auth/register";
 import Login from "./user/components/auth/login";
 import UsersList from "./admin/components/users/UsersList";
-import AdminHome from "./admin/components/dashboard/Dashboard";
+import AdminHome from "./admin/components/admin-home/AminHome";
 
 
 function App() {
