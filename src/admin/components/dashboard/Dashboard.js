@@ -5,7 +5,7 @@ import Sidebar from '../sidebar/Sidebar';
 import Topbar from '../topbar/Topbar';
 import './Dashboard.css';
 
-function Dashboard() {
+function AdminHome() {
 
     return (
         <div>
@@ -398,4 +398,4 @@ function Dashboard() {
     )
 }
 
-export default Dashboard;
+export default AdminHome;
