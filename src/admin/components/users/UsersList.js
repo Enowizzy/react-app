@@ -30,7 +30,7 @@ const UsersList = () => {
         });
     }, [])
     return (
-        <div class="container col-md-10 justify-content-center mt-3">
+        <div class="container-fluid col-md-10 justify-content-center mt-3">
             <h2>Users Page</h2>
             <table className="table table-bordered">
                 <thead className="bg-dark text-white">
